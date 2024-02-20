@@ -67,6 +67,27 @@
                 url_to_flag_picture: document.getElementById('flag').value,
             }
 
+            if (put_country.id == '') {
+                delete put_country.id
+            }
+            if (put_country.name == '') {
+                delete put_country.name
+            }
+            if (put_country.capital == '') {
+                delete put_country.capital
+            }
+            if (put_country.number_of_citizens == '') {
+                delete put_country.number_of_citizens
+            }
+            if (put_country.continent == '') {
+                delete put_country.continent
+            }
+            if (put_country.url_to_flag_picture == '') {
+                delete put_country.url_to_flag_picture
+            }
+           
+
+
             
             const send_details = {
                 method: 'PUT',
