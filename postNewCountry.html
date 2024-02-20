@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>POST NEW COUNTRY</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="url"] {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST</title>
+</head>
+
+<body>
+    <h2>Add New Country</h2>
+    <form id="user_form">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="capital">Capital:</label>
+        <input type="text" id="capital" name="capital">
+
+        <label for="Citizens">Citizens:</label>
+        <input type="number" id="citizens" name="Citizens">
+
+        <label for="continent">Continent:</label>
+        <input type="text" id="continent" name="continent">
+
+        <label for="Flag">Flag:</label>
+        <input type="text" id="flag" name="Flag">
+
+        <input type="submit" value="Send">        
+    </form>
+    <script>
+        function my_submit(e) {
+            console.log(e);
+            e.preventDefault();
+
+            const new_user = {
+                id: document.getElementById('id').value,
+                name: document.getElementById('name').value,
+                capital: document.getElementById('capital').value,
+                number_of_citizens: document.getElementById('citizens').value ,
+                continent: document.getElementById('continent').value,
+                url_to_flag_picture: document.getElementById('flag').value,
+            }
+
+            const send_details = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(new_user)
+            }
+            fetch('http://localhost:3000/country/', send_details)
+            .then(response => response.json())
+            .then(data => {
+                alert('new country added')
+            })
+        }
+
+        document.getElementById('user_form').onsubmit = my_submit
+        
+</script>
+</body>
+
+</html>

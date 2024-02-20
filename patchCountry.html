@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Patch NEW COUNTRY</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="url"] {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST</title>
+</head>
+
+<body>
+    <h2>Patch New Country</h2>
+
+    <span id="message"></span>
+    <form id="user_form">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="capital">Capital:</label>
+        <input type="text" id="capital" name="capital">
+
+        <label for="Citizens">Citizens:</label>
+        <input type="number" id="citizens" name="Citizens">
+
+        <label for="continent">Continent:</label>
+        <input type="text" id="continent" name="continent">
+
+        <label for="Flag">Flag:</label>
+        <input type="text" id="flag" name="Flag">
+
+        <input type="submit" value="Send">        
+    </form>
+    <script>
+        function my_submit(e) {
+            e.preventDefault();
+
+            let id = document.getElementById('id').value
+
+            const patch_country = {
+                id: document.getElementById('id').value,
+                name: document.getElementById('name').value,
+                capital: document.getElementById('capital').value,
+                number_of_citizens: document.getElementById('citizens').value ,
+                continent: document.getElementById('continent').value,
+                url_to_flag_picture: document.getElementById('flag').value,
+            }
+
+            const send_details = {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(patch_country)
+            }
+            fetch(`http://localhost:3000/country/${id}`, send_details)
+            .then(response => {
+                if(response.status === 404){
+                    return null
+                }
+                  return response.json()  
+            })
+            .then(data => {
+                if(data == null){
+                    return document.getElementById('message').innerHTML = 'not found'
+                }
+                alert('patch was compleated')
+            })
+        }
+
+        document.getElementById('user_form').onsubmit = my_submit
+        
+</script>
+</body>
+
+</html>
