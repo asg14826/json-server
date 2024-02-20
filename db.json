@@ -1,0 +1,92 @@
+{
+  "country": [
+    {
+      "id": "1",
+      "name": "United States",
+      "capital": "Washington, D.C.",
+      "number_of_citizens": 331002651,
+      "continent": "North America",
+      "url_to_flag_picture": "img/usa.png"
+    },
+    {
+      "id": "2",
+      "name": "Canada",
+      "capital": "Ottawa",
+      "number_of_citizens": 37742154,
+      "continent": "North America",
+      "url_to_flag_picture": "img/canada.png"
+    },
+    {
+      "id": "3",
+      "name": "France",
+      "capital": "Paris",
+      "number_of_citizens": 65273511,
+      "continent": "Europe",
+      "url_to_flag_picture": "img/france.png"
+    },
+    {
+      "id": "4",
+      "name": "Japan",
+      "capital": "Tokyo",
+      "number_of_citizens": 126476461,
+      "continent": "Asia",
+      "url_to_flag_picture": "img/japan.png"
+    },
+    {
+      "id": "5",
+      "name": "Australia",
+      "capital": "Canberra",
+      "number_of_citizens": 25499884,
+      "continent": "Oceania",
+      "url_to_flag_picture": "img/australia.png"
+    },
+    {
+      "id": "6",
+      "name": "Brazil",
+      "capital": "Brasília",
+      "number_of_citizens": 212559417,
+      "continent": "South America",
+      "url_to_flag_picture": "img/brazil.png"
+    },
+    {
+      "id": "7",
+      "name": "South Africa",
+      "capital": "Pretoria (administrative), Cape Town (legislative), Bloemfontein (judicial)",
+      "number_of_citizens": 59308690,
+      "continent": "Africa",
+      "url_to_flag_picture": "img/southafrica.png"
+    },
+    {
+      "id": "8",
+      "name": "India",
+      "capital": "New Delhi",
+      "number_of_citizens": 1380004385,
+      "continent": "Asia",
+      "url_to_flag_picture": "img/india.png"
+    },
+    {
+      "id": "9",
+      "name": "Russia",
+      "capital": "Moscow",
+      "number_of_citizens": 146793744,
+      "continent": "Europe",
+      "url_to_flag_picture": "img/russia.png"
+    },
+    {
+      "id": "10",
+      "name": "United Kingdom",
+      "capital": "London",
+      "number_of_citizens": 67886011,
+      "continent": "Europe",
+      "url_to_flag_picture": "img/united-kingdom.png"
+    },
+    {
+      "id": "11",
+      "name": "germany",
+      "capital": "berlin",
+      "number_of_citizens": "121212123",
+      "continent": "EUROPE",
+      "url_to_flag_picture": "img/germany.png"
+    }
+  ]
+}
